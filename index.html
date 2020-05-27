@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <br>
+    <div class="Banner">
+      <img src="Baner.png" alt="">
+    </div>
+
+    <div class="contenido">
+
+      <div class="Galeria">
+
+        <!-- NOTE: Marco de la Pintura -->
+        <div class="Marco">
+          <img src="Fondo.png" alt="">
+        </div>
+
+        <div class="I">
+          <img src="Izquierda.png" alt="">
+          <input type="button" name="Izquierda" onclick="Izquierda()" class="Izquierda">
+        </div>
+
+          <a href="javascript:Agrandar()">
+          <img src="https://i.ibb.co/Pr7XTfN/Mr-Spider.png">
+          </a>
+
+        <div class="D">
+          <img src="Derecha.png" alt="">
+          <input type="button" name="Derecho" onclick="Derecho()" class="Derecha">
+        </div>
+
+      </div>
+
+    </div>
+<!-- NOTE:Sistema de Imagenes  -->
+    <script>
+      var P1 = "https://i.ibb.co/tmbkWH5/Ser.jpg";
+      var P2 = "https://i.ibb.co/jD5CVkk/Fondo2.jpg";
+      var P3 = "https://i.ibb.co/x2N7B7z/Ninfa.jpg";
+      var P4 = "https://i.ibb.co/DfLT1St/Hamanta.jpg";
+      var P5 = "https://i.ibb.co/Pr7XTfN/Mr-Spider.png";
+      var num = 1;
+      var Pintura = P1;
+      function Derecho() {
+        if (num == 6) {
+          num = 1;
+        }
+        if (num == 0) {
+          num = 5;
+        }
+        num++;
+        switch (num) {
+          case 1:Pinturas.src=P1;break;
+          case 2:Pinturas.src=P2;break;
+          case 3:Pinturas.src=P3;break;
+          case 4:Pinturas.src=P4;break;
+          case 5:Pinturas.src=P5;break;
+          default: Pinturas.src=P1;
+        }
+      }
+      function Izquierda() {
+        if (num == 6) {
+          num = 1;
+        }
+        num--;
+        if (num == 0) {
+          num = 5;
+        }
+        switch (num) {
+          case 1:Pinturas.src=P1;break;
+          case 2:Pinturas.src=P2;break;
+          case 3:Pinturas.src=P3;break;
+          case 4:Pinturas.src=P4;break;
+          case 5:Pinturas.src=P5;break;
+          default: Pinturas.src=P1;
+        }
+      }
+
+    </script>
+<!-- NOTE:Scalar Imagen -->
+    <script>
+      function Agrandar() {
+        Pinturas
+      }
+    </script>
+  </body>
+</html>
