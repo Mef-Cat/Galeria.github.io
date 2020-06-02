@@ -4,39 +4,61 @@
     <meta charset="utf-8">
     <title>Galeria</title>
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   </head>
   <body>
+<!-- NOTE: Banner de la Página -->
     <br>
     <div class="Banner">
       <img src="Baner.png" alt="">
     </div>
-
+<!-- NOTE: contenido -->
     <div class="contenido">
-
       <div class="Galeria">
-
         <!-- NOTE: Marco de la Pintura -->
         <div class="Marco">
+          <a href="Javascript:abrir()">
           <img src="Fondo.png" alt="">
-        </div>
-
+          </a>
+      </div>
+      <!-- NOTE: Boton Izquierdo -->
         <div class="I">
           <img src="Izquierda.png" alt="">
           <input type="button" name="Izquierda" onclick="Izquierda()" class="Izquierda">
         </div>
-
-          <a href="javascript:Agrandar()">
-          <img src="https://i.ibb.co/Pr7XTfN/Mr-Spider.png" id="Pinturas">
-          </a>
-
+      <!-- NOTE: Pintura Mostrada -->
+        <img src="https://i.ibb.co/Pr7XTfN/Mr-Spider.png" id="Pinturas">
+      <!-- NOTE: Boton Derecho -->
         <div class="D">
           <img src="Derecha.png" alt="">
           <input type="button" name="Derecho" onclick="Derecho()" class="Derecha">
         </div>
 
       </div>
-
+      <!-- NOTE: Efecto de Agrandar -->
+      <div class="ImagenAgrandada" id="ventana">
+      <!-- NOTE: Efecto de cerrar con el fondo -->
+        <div class="cerrar" onclick="cerrar()">
+        </div>
+      <!-- NOTE: Boton Izquierdo -->
+        <div class="I" >
+          <img src="Izquierda.png" alt="">
+          <input type="button" name="Izquierda" onclick="Izquierda()" class="Izquierda">
+        </div>
+      <!-- NOTE: Pintura en LightBox -->
+        <img src="https://i.ibb.co/Pr7XTfN/Mr-Spider.png" id="ImGrande">
+      <!-- NOTE: Boton Derecho -->
+        <div class="D">
+          <img src="Derecha.png" alt="">
+          <input type="button" name="Derecho" onclick="Derecho()" class="Derecha">
+        </div>
+      <!-- NOTE: Titulo de la pintura -->
+        <p id="titulo">
+          Mr-Spider
+        </p>
+      </div>
     </div>
+
 <!-- NOTE:Sistema de Imagenes  -->
     <script>
       var P1 = "https://i.ibb.co/tmbkWH5/Ser.jpg";
@@ -55,13 +77,14 @@
         }
         num++;
         switch (num) {
-          case 1:Pinturas.src=P1;break;
-          case 2:Pinturas.src=P2;break;
-          case 3:Pinturas.src=P3;break;
-          case 4:Pinturas.src=P4;break;
-          case 5:Pinturas.src=P5;break;
-          default: Pinturas.src=P1;
+          case 1:Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";break;
+          case 2:Pinturas.src=P2;ImGrande.src=P2;Titulo="Alma";break;
+          case 3:Pinturas.src=P3;ImGrande.src=P3;Titulo="Ninfa";break;
+          case 4:Pinturas.src=P4;ImGrande.src=P4;Titulo="Hamanta";break;
+          case 5:Pinturas.src=P5;ImGrande.src=P5;Titulo="Mr-Spider";break;
+          default: Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";
         }
+        document.getElementById('titulo').innerHTML = Titulo;
       }
       function Izquierda() {
         if (num == 6) {
@@ -72,21 +95,34 @@
           num = 5;
         }
         switch (num) {
-          case 1:Pinturas.src=P1;break;
-          case 2:Pinturas.src=P2;break;
-          case 3:Pinturas.src=P3;break;
-          case 4:Pinturas.src=P4;break;
-          case 5:Pinturas.src=P5;break;
-          default: Pinturas.src=P1;
+          case 1:Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";break;
+          case 2:Pinturas.src=P2;ImGrande.src=P2;Titulo="Alma";break;
+          case 3:Pinturas.src=P3;ImGrande.src=P3;Titulo="Ninfa";break;
+          case 4:Pinturas.src=P4;ImGrande.src=P4;Titulo="Hamanta";break;
+          case 5:Pinturas.src=P5;ImGrande.src=P5;Titulo="Mr-Spider";break;
+          default: Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";
         }
+        switch (num) {
+          case 1:Titulo="Ser";break;
+          case 2:Titulo="Alma";break;
+          case 3:Titulo="Ninfa";break;
+          case 4:Titulo="Hamanta";break;
+          case 5:Titulo="Mr-Spider";break;
+          default:Titulo="Ser";
+        }
+        document.getElementById('titulo').innerHTML = Titulo;
       }
 
     </script>
 <!-- NOTE:Scalar Imagen -->
     <script>
-      function Agrandar() {
-        Pinturas
-      }
+          var Titulo;
+          function abrir(){
+              document.getElementById('ventana').style.display="block";
+            }
+          function cerrar(){
+              document.getElementById('ventana').style.display="none";
+            }
     </script>
   </body>
 </html>

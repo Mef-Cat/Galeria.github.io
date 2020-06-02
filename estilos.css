@@ -86,3 +86,81 @@ width: 100%;
   right: -20%;
   top: 40%;
 }
+.ImagenAgrandada{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  display: none;
+  background: rgba(0, 0, 0, 0.70);
+}
+.ImagenAgrandada img{
+  padding: 0.3%;
+  background: #fff;
+  width: 72%;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%,-50%);
+}
+
+.ImagenAgrandada .Izquierda{
+  position: absolute;
+  left: 3%;
+  top: 37%;
+}
+.ImagenAgrandada .I input[type="button" i]{
+  width: 5%;
+  height: 6%;
+  border-style: none;
+  border-color: none;
+  border-image: none;
+  background: none;
+  background-color:none;
+  outline: none;
+}
+.ImagenAgrandada .I img{
+  width: 5%;
+  position:absolute;
+  left: 5%;
+  top: 40%;
+  background: none;
+}
+.ImagenAgrandada .Derecha{
+  position: absolute;
+  left:92%;
+  top: 37%;
+}
+.ImagenAgrandada .D input[type="button" i]{
+  width: 5%;
+  height: 6%;
+  border-style: none;
+  border-color: none;
+  border-image: none;
+  background: none;
+  background-color:none;
+  outline: none;
+}
+.ImagenAgrandada .D img{
+  width: 5%;
+  position:absolute;
+  left: 95%;
+  top: 40%;
+  background: none;
+}
+#titulo{
+  color: #fff;
+  position: absolute;
+  top: 81%;
+  left: 50%;
+  font-size: 300%;
+  transform: translate(-50%,-0%);
+}
+.cerrar{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.ImagenAgrandada p{
+  font-family: 'Lobster', cursive;
+}
