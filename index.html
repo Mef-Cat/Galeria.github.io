@@ -35,6 +35,19 @@
         </div>
 
       </div>
+      <!-- NOTE: Reproductor -->
+      <div class="Pause" id="Paus">
+        <img src="Pause.png" >
+        <input type="button" name="Pause" onclick="Pause()" class="Pausee">
+      </div>
+        <div class="Muscia">
+          <audio src="" id="Music"autoplay preload="auto">
+          </audio>
+        </div>
+      <div class="Play" id="Pla">
+          <img src="Play.png" >
+          <input type="button" name="Play" onclick="Play()" class="Playy">
+        </div>
       <!-- NOTE: Efecto de Agrandar -->
       <div class="ImagenAgrandada" id="ventana">
       <!-- NOTE: Efecto de cerrar con el fondo -->
@@ -57,6 +70,7 @@
           Mr-Spider
         </p>
       </div>
+
     </div>
 
 <!-- NOTE:Sistema de Imagenes  -->
@@ -66,53 +80,67 @@
       var P3 = "https://i.ibb.co/x2N7B7z/Ninfa.jpg";
       var P4 = "https://i.ibb.co/DfLT1St/Hamanta.jpg";
       var P5 = "https://i.ibb.co/Pr7XTfN/Mr-Spider.png";
+      var P6 = "https://i.ibb.co/yQFkpmV/Wolkman.png";
       var num = 1;
       var Pintura = P1;
+      var Musica = "AC_DC_Back_In_Black.mp3";
       function Derecho() {
-        if (num == 6) {
+        if (num == 7) {
           num = 1;
         }
         if (num == 0) {
-          num = 5;
+          num = 6;
         }
         num++;
         switch (num) {
-          case 1:Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";break;
-          case 2:Pinturas.src=P2;ImGrande.src=P2;Titulo="Alma";break;
-          case 3:Pinturas.src=P3;ImGrande.src=P3;Titulo="Ninfa";break;
-          case 4:Pinturas.src=P4;ImGrande.src=P4;Titulo="Hamanta";break;
-          case 5:Pinturas.src=P5;ImGrande.src=P5;Titulo="Mr-Spider";break;
-          default: Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";
+          case 1:Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";break;
+          case 2:Pinturas.src=P2;ImGrande.src=P2;Titulo="Alma";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";break;
+          case 3:Pinturas.src=P3;ImGrande.src=P3;Titulo="Ninfa";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";break;
+          case 4:Pinturas.src=P4;ImGrande.src=P4;Titulo="Hamantha";Musica = "The_Ballad_of_Hamantha.mp3";document.getElementById('Paus').style.display="block";document.getElementById('Pla').style.display="block";break;
+          case 5:Pinturas.src=P5;ImGrande.src=P5;Titulo="Mr-Spider";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";break;
+          case 6:Pinturas.src=P6;ImGrande.src=P6;Titulo="Wolkman";Musica = "AC_DC_Back_In_Black.mp3";document.getElementById('Paus').style.display="block";document.getElementById('Pla').style.display="block";break;
+          default: Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";
         }
         document.getElementById('titulo').innerHTML = Titulo;
+        document.getElementById('Music').src=Musica;
       }
       function Izquierda() {
-        if (num == 6) {
+        if (num == 7) {
           num = 1;
         }
         num--;
         if (num == 0) {
-          num = 5;
+          num = 6;
         }
         switch (num) {
-          case 1:Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";break;
-          case 2:Pinturas.src=P2;ImGrande.src=P2;Titulo="Alma";break;
-          case 3:Pinturas.src=P3;ImGrande.src=P3;Titulo="Ninfa";break;
-          case 4:Pinturas.src=P4;ImGrande.src=P4;Titulo="Hamanta";break;
-          case 5:Pinturas.src=P5;ImGrande.src=P5;Titulo="Mr-Spider";break;
-          default: Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";
+          case 1:Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";break;
+          case 2:Pinturas.src=P2;ImGrande.src=P2;Titulo="Alma";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";break;
+          case 3:Pinturas.src=P3;ImGrande.src=P3;Titulo="Ninfa";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";break;
+          case 4:Pinturas.src=P4;ImGrande.src=P4;Titulo="Hamantha";Musica = "The_Ballad_of_Hamantha.mp3";document.getElementById('Paus').style.display="block";document.getElementById('Pla').style.display="block";break;
+          case 5:Pinturas.src=P5;ImGrande.src=P5;Titulo="Mr-Spider";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";break;
+          case 6:Pinturas.src=P6;ImGrande.src=P6;Titulo="Wolkman";Musica = "AC_DC_Back_In_Black.mp3";document.getElementById('Paus').style.display="block";document.getElementById('Pla').style.display="block";break;
+          default: Pinturas.src=P1;ImGrande.src=P1;Titulo="Ser";Musica = "#";document.getElementById('Paus').style.display="none";document.getElementById('Pla').style.display="none";
         }
         switch (num) {
           case 1:Titulo="Ser";break;
           case 2:Titulo="Alma";break;
           case 3:Titulo="Ninfa";break;
-          case 4:Titulo="Hamanta";break;
+          case 4:Titulo="Hamantha";break;
           case 5:Titulo="Mr-Spider";break;
+          case 6:Titulo="Wolkman";break;
           default:Titulo="Ser";
         }
+        document.getElementById('Music').src=Musica;
         document.getElementById('titulo').innerHTML = Titulo;
       }
-
+      function Pause() {
+        document.getElementById('Music').pause();
+        document.getElementById('Paus').style.display="block";
+      }
+      function Play() {
+        document.getElementById('Music').play();
+        document.getElementById('Pla').style.display="block";
+      }
     </script>
 <!-- NOTE:Scalar Imagen -->
     <script>

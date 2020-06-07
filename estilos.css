@@ -164,3 +164,55 @@ width: 100%;
 .ImagenAgrandada p{
   font-family: 'Caveat', cursive;
 }
+.Pause img{
+  width: 5%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.Pause input[type="button" i]{
+  width: 5%;
+  height: 9%;
+  border-style: none;
+  border-color: none;
+  border-image: none;
+  background: none;
+  background-color:none;
+  outline: none;
+}
+.Pause .Pausee{
+  position: absolute;
+  right:85%;
+  top: 30.5%;
+}
+
+.Play img{
+  width: 5%;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+
+.Play input[type="button" i]{
+  width: 5%;
+  height: 9%;
+  border-style: none;
+  border-color: none;
+  border-image: none;
+  background: none;
+  background-color:none;
+  outline: none;
+}
+
+.Play .Playy{
+  position: absolute;
+  left:85%;
+  top: 30.5%;
+}
+.Play {
+  display: none;
+}
+.Pause {
+  display: none;
+}
